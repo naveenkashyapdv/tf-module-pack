@@ -8,12 +8,16 @@ resource "aws_autoscaling_group" "this" {
   launch_template {
     id      = var.launch_template_id
     version = var.launch_template_version
+
+
   }
 
   tag {
     key                 = "Name"
     value               = var.name
     propagate_at_launch = true
+
+
   }
 
   dynamic "tag" {
@@ -22,6 +26,12 @@ resource "aws_autoscaling_group" "this" {
       key                 = tag.key
       value               = tag.value
       propagate_at_launch = true
+
+
     }
+
+
   }
+
+
 }

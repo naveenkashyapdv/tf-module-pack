@@ -2,6 +2,8 @@ resource "aws_db_subnet_group" "this" {
   name       = "${var.identifier}-subnet-group"
   subnet_ids = var.subnet_ids
   tags       = merge(var.tags, { Name = "${var.identifier}-subnet-group" })
+
+
 }
 
 resource "aws_db_instance" "this" {
@@ -20,4 +22,6 @@ resource "aws_db_instance" "this" {
   deletion_protection    = var.deletion_protection
   storage_encrypted      = true
   tags                   = merge(var.tags, { Name = var.identifier })
+
+
 }

@@ -14,11 +14,19 @@ resource "aws_launch_template" "this" {
       volume_size = var.volume_size
       volume_type = var.volume_type
       encrypted   = true
+
+
     }
+
+
   }
 
   tag_specifications {
     resource_type = "instance"
     tags          = var.tags
+
+
   }
+
+
 }

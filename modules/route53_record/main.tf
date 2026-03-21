@@ -11,6 +11,12 @@ resource "aws_route53_record" "this" {
       name                   = alias.value.name
       zone_id                = alias.value.zone_id
       evaluate_target_health = alias.value.evaluate_target_health
+
+
     }
+
+
   }
+
+
 }

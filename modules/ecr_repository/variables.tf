@@ -1,5 +1,29 @@
-variable "name" { type = string }
-variable "image_tag_mutability" { type = string default = "MUTABLE" }
-variable "scan_on_push" { type = bool default = true }
-variable "kms_key_arn" { type = string default = null }
-variable "tags" { type = map(string) default = {} }
+variable "name" {
+  type = string
+
+
+}
+variable "image_tag_mutability" {
+  type    = string
+  default = "MUTABLE"
+
+
+}
+variable "scan_on_push" {
+  type    = bool
+  default = true
+
+
+}
+variable "kms_key_arn" {
+  type    = string
+  default = null
+
+
+}
+variable "tags" {
+  type = map(string)
+  default = {
+  }
+
+}

@@ -5,4 +5,6 @@ resource "aws_ssm_parameter" "this" {
   overwrite = true
   tier      = var.tier
   tags      = var.tags
+
+
 }

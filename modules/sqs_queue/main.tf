@@ -5,4 +5,6 @@ resource "aws_sqs_queue" "this" {
   message_retention_seconds  = var.message_retention_seconds
   kms_master_key_id          = var.kms_master_key_id
   tags                       = var.tags
+
+
 }

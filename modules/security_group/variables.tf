@@ -1,6 +1,18 @@
-variable "name" { type = string }
-variable "description" { type = string }
-variable "vpc_id" { type = string }
+variable "name" {
+  type = string
+
+
+}
+variable "description" {
+  type = string
+
+
+}
+variable "vpc_id" {
+  type = string
+
+
+}
 variable "ingress_rules" {
   type = list(object({
     description = optional(string)
@@ -10,6 +22,8 @@ variable "ingress_rules" {
     cidr_blocks = list(string)
   }))
   default = []
+
+
 }
 variable "egress_rules" {
   type = list(object({
@@ -20,5 +34,12 @@ variable "egress_rules" {
     cidr_blocks = list(string)
   }))
   default = []
+
+
 }
-variable "tags" { type = map(string) default = {} }
+variable "tags" {
+  type = map(string)
+  default = {
+  }
+
+}

@@ -5,6 +5,8 @@ resource "aws_lb" "this" {
   subnets            = var.subnet_ids
   security_groups    = var.security_group_ids
   tags               = var.tags
+
+
 }
 
 resource "aws_lb_target_group" "this" {
@@ -21,9 +23,13 @@ resource "aws_lb_target_group" "this" {
     interval            = 30
     healthy_threshold   = 2
     unhealthy_threshold = 3
+
+
   }
 
   tags = var.tags
+
+
 }
 
 resource "aws_lb_listener" "http" {
@@ -34,5 +40,9 @@ resource "aws_lb_listener" "http" {
   default_action {
     type             = "forward"
     target_group_arn = aws_lb_target_group.this.arn
+
+
   }
+
+
 }
